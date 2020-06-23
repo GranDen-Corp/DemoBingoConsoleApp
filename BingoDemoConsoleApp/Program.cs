@@ -58,8 +58,8 @@ namespace BingoDemoConsoleApp
 
         private static List<PrizeLine2D> DiagonalPrize => new List<PrizeLine2D>
         {
-            new PrizeLine2D(new List<(int X, int Y)> {(0, 0), (1, 1), (2, 2), (3, 3)}, "Diagonal Line1"),
-            new PrizeLine2D(new List<(int X, int Y)> {(3, 0), (2, 1), (1, 2), (0, 3)}, "Diagonal Line2"),
+            "(0, 0), (1, 1), (2, 2), (3, 3) | 'Diagonal Line1'".ToPrizeLine2d(),
+            "(3, 0), (2, 1), (1, 2), (0, 3) | 'Diagonal Line2'".ToPrizeLine2d()
         };
     }
 }
