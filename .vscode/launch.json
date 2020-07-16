@@ -20,7 +20,6 @@
             // Enable source link (https://github.com/dotnet/sourcelink) debugging
             "justMyCode": false,
             "symbolOptions": {
-                "searchPaths": [],
                 // Turn this on for loading system lib's symbol file, which may be very slow.
                 "searchMicrosoftSymbolServer": false,
                 "searchNuGetOrgSymbolServer": true
