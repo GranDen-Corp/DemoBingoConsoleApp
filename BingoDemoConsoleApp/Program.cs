@@ -19,10 +19,10 @@ namespace BingoDemoConsoleApp
             //actually you can provide only the points that marked true.
             var demoInput = new List<MarkPoint2D>()
                 .AddMarkPoint2Ds(
-                    (0, 0, true ), (0, 1, true ), (0, 2, true ), (0, 3, true ),
-                    (1, 0, true ), (1, 1, true ), (1, 2, false), (1, 3, false),
-                    (2, 0, true ), (2, 1, false), (2, 2, true ), (2, 3, false),
-                    (3, 0, true ), (3, 1, false), (3, 2, false), (3, 3, true )
+                    (0, 0, true), (0, 1, true), (0, 2, true), (0, 3, true),
+                    (1, 0, true), (1, 1, true), (1, 2, false), (1, 3, false),
+                    (2, 0, true), (2, 1, false), (2, 2, true), (2, 3, false),
+                    (3, 0, true), (3, 1, false), (3, 2, false), (3, 3, true)
                 );
 
             var matchedAward = bingo.Decide(demoInput);
@@ -33,8 +33,13 @@ namespace BingoDemoConsoleApp
             Console.WriteLine("===========");
 
             // designate MarkPoint using string representation:
-            var demoInput2 = new [] { new MarkPoint2D("(0, 0)"), new MarkPoint2D("(1, 1)"), new MarkPoint2D("(2, 2)"), new MarkPoint2D("(3, 3)") };
-            var matchedAward2 = bingo.Decide(demoInput2.ToList());
+            var demoInput2 = new[] {
+                new MarkPoint2D("(0, 0)"), new MarkPoint2D("(1, 1)"), new MarkPoint2D("(2, 2)"), new MarkPoint2D("(3, 3)"),
+                new MarkPoint2D("(0, 1)"),
+                new MarkPoint2D("(0, 2)"),
+                new MarkPoint2D("(0, 3)")};
+
+            var matchedAward2 = bingo.Decide(demoInput2).ToList();
 
             Console.WriteLine($"Get {matchedAward2.Count} prize(s):");
             Console.WriteLine(string.Join(", ", matchedAward2));
